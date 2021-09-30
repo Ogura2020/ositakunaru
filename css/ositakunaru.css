@@ -1,0 +1,17 @@
+@charset “UTF-8”;
+
+body {
+ text-align:center;
+ color:#fff;
+ background-color:#4ec5c1
+}
+
+.img_block img{
+  display: block;
+  margin:auto;
+}
+
+img {
+max-width: 100%;
+height: auto;
+}

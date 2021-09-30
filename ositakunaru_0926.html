@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<htmllang="ja">
+
+<head>
+  <meta charset="UTF-8"/>
+  <link href="css/ositakunaru_0926.css" rel="stylesheet" >
+  <title>押したくなるサイト</title>
+</head>
+
+<body>
+ <h1>押したくなっちゃうサイト</h1>
+  <p>押したくなりませんか？</p>
+ <p>片切スイッチ</p>
+
+<div class="img_block">
+ <img src="syasinn/suitti_back.png" alt="片切スイッチ後ろ" class="usiro">
+ <img id="click"  alt="片切スイッチボタンOFF" src="syasinn/suitti_off3.png"  class="suitti" onClick="henkou()">
+</div>
+
+<audio id="dennki" preload="auto"> 
+ <source src="audio/電気のスイッチを入れる.mp3" type="audio/mp3">
+ <p>お使いの環境では再生できません。</p>
+</audio>
+
+<!--
+<img id="click2"  alt="片切スイッチON" src="syasinn/suitti_on3.png" onClick="henkou2();play2()">
+<audio id="dennki2" preload="auto"> 
+ <source src="audio/電気のスイッチを入れる.mp3" type="audio/mp3">
+ <p>お使いの環境では再生できません。</p>
+</audio>
+document.body.style.backgroundColor = "#ccffcc";
+-->
+
+ <script>
+ var syasinn_src=new Array("syasinn/suitti_on3.png","syasinn/suitti_off3.png");
+   var i = 0;
+   function henkou(){
+     if(i == 1){
+       i = 0;
+      }
+      else {
+	i ++;
+      }
+	document.getElementById("click").src = syasinn_src[i];
+   }
+
+   document.getElementById("click").addEventListener("click", function(){
+     document.getElementById("dennki").play();
+   })
+
+function colorize() {
+     var element = document.getElementsByTagName("html")[0];
+     element.style.backgroundColor = 'blue';
+}
+
+  </script>
+</body>
+
+</html>
+

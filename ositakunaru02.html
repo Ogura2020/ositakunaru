@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<htmllang="ja">
+
+<head>
+  <meta charset="UTF-8"/>
+  <title>押したくなるサイト</title>
+</head>
+
+<body>
+  押したくなりませんか？
+ <p>片切スイッチ</p>
+<p><a onClick="sound()">このテキストを押すと挨拶します！</a></p>
+ <img id="click" src="syasinn/suitti_off.png" onclick="henkou()">
+<audio id="dennki" preload="auto"> 
+ <source src="audio/電気のスイッチを入れる.mp3" type="audio/mp3">
+ <p>お使いの環境では再生できません。</p>
+</audio>
+ <script>
+   var syasinn_src=new Array("syasinn/suitti_on.png","syasinn/suitti_off.png");
+   var i = 0;
+   function henkou(){
+     if(i == 1){
+       i = 0;
+      }
+      else {
+	i ++;
+      }
+	document.getElementById("click").src = syasinn_src[i];
+      }
+function sound()
+{
+	document.getElementById( 'dennki' ).play() ;
+}
+
+  </script>
+</body>
+
+</html>
+
