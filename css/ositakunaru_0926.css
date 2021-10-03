@@ -2,6 +2,7 @@
 
 body {
   text-align:center;
+  line-height: 15px;
   color:#fff;
   background:#4ec5c1;
  }
@@ -42,4 +43,16 @@ body {
  
  body.hide .cover {
    opacity: 0.5;
+ }
+
+ @media screen and (max-width: 414px){
+   h1 {font-size: 24px;}
+   p {font-size: 14px;}
+   .img_block {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
  }
