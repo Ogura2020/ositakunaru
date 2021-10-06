@@ -41,7 +41,7 @@ body {
    transition: all 0.15s linear;
  }
  
- body.hide .cover {
+ .hide .cover {
    opacity: 0.5;
  }
 
