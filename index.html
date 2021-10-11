@@ -12,8 +12,6 @@
  <h1>押したくなっちゃうサイト</h1>
   <p>押したくなりませんか？</p>
 
-
-
 <div class="img_block">
  <img src="syasinn/suitti_back.png" alt="片切スイッチ後ろ" class="usiro">
  <img id="click"  alt="片切スイッチボタンON" src="syasinn/suitti_on3.png"  class="suitti">
@@ -24,23 +22,32 @@
 <div class="cover">
 </div>
 
+<!--
 <audio id="dennki" preload="auto"> 
  <source src="audio/電気のスイッチを入れる.mp3" type="audio/mp3">
  <p>お使いの環境では再生できません。</p>
 </audio>
+-->
+
+<script src="https://cdn.jsdelivr.net/npm/howler@2.2.3/dist/howler.min.js"></script>
+<script src="howler.js"></script>
 
 <script>
   var button = document.getElementById("click");
-  var audio = document.getElementById("dennki");
+  //var audio = document.getElementById("dennki");
   var syasinn_src = new Array("syasinn/suitti_on3.png","syasinn/suitti_off3.png");
   var i = 0;
-  
-  
+
   const socket = new WebSocket('wss://p8pz0ho2sb.execute-api.ap-northeast-1.amazonaws.com/production');
 
 // 接続が開いたときのイベント
   socket.addEventListener('open', function (event) {
     console.log('websocketに接続しました')
+  });
+
+// メッセージの待ち受け
+  socket.addEventListener('message', function (event) {
+    console.log('Message from server ', event.data);
   });
 
   function henkou(){
@@ -83,7 +90,7 @@
   */
 
   button.addEventListener("click", function() {
-    audio.play();
+    //audio.play();
     fade();
     henkou();
     //light();
@@ -94,4 +101,3 @@
 </body>
 
 </html>
-
