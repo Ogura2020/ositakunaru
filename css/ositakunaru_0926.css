@@ -1,5 +1,7 @@
 @charset “UTF-8”;
-
+html {
+  touch-action: manipulation;
+}
 body {
   text-align:center;
   line-height: 15px;
@@ -57,5 +59,3 @@ body {
     margin: auto;
    }
  }
-
- touch-action: manipulation;
