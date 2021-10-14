@@ -42,12 +42,25 @@
 // 接続が開いたときのイベント
   socket.addEventListener('open', function (event) {
     console.log('websocketに接続しました')
+
+    const data = JSON.stringify({
+      action:'conneted',
+      data:{},
+    });
+    socket.send(data);  
   });
 
 // メッセージの待ち受け
   socket.addEventListener('message', function (event) {
     var jyusinndata = JSON.parse(event.data);    
-    console.log(event.data);
+    console.log(jyusinndata);
+
+    const ch0 = jyusinnddata.data[0];
+    if(ch0 === 0){
+      document.body.classList.add('hide');
+    }else if (ch0 === 255){
+    document.body.classList.remove('hide');
+    }
   });
 
   function henkou(){
