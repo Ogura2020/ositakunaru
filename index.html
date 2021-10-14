@@ -44,7 +44,7 @@
     console.log('websocketに接続しました')
 
     const data = JSON.stringify({
-      action:'conneted',
+      action:'connected',
       data:{},
     });
     socket.send(data);  
@@ -53,9 +53,10 @@
 // メッセージの待ち受け
   socket.addEventListener('message', function (event) {
     var jyusinndata = JSON.parse(event.data);    
-    console.log(jyusinndata);
+    console.log('受信したデータ→', jyusinndata);
 
     const ch0 = jyusinndata.data[0];
+    
     if(ch0 === 0){
       document.body.classList.add('hide');
     }else if (ch0 === 255){
