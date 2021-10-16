@@ -8,6 +8,8 @@ body {
   color:#fff;
   background:#4ec5c1;
   user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
  }
  
  .img_block {
@@ -33,6 +35,7 @@ body {
    user-drag: none;
    -webkit-user-drag: none;
    -moz-user-select: none;
+   touch-callout: none;
  }
  
  .cover {
