@@ -111,6 +111,13 @@
     henkou();
     //light();
   });
+
+  //androidでテキストを選択できなくするコード
+  window.oncontextmenu = function(event) {
+     event.preventDefault();
+     event.stopPropagation();
+     return false;
+  };
 </script>
 
 
