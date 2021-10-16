@@ -16,7 +16,6 @@ body {
      left: 0;
      right: 0;
      margin: auto;
-     pointer-events: none;
  }
  
  .suitti {
@@ -31,6 +30,9 @@ body {
  .img_block img{
    display: block;
    margin:auto;
+   user-drag: none;
+   -webkit-user-drag: none;
+   -moz-user-select: none;
  }
  
  .cover {
