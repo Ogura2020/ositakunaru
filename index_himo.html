@@ -11,7 +11,14 @@
 <body>
   <script src="matter.js"></script>
   <div class="cover"></div>
+  <!--<img id="click"  alt="紐のさきのボール" src="syasinn/ball.png"  class="suitti">-->
 
+  <audio id="dennki" preload="auto"> 
+    <source src="audio/電気のスイッチを入れる.mp3" type="audio/mp3">
+    <p>お使いの環境では再生できません。</p>
+  </audio>
+
+  <img id="click"  alt="片切スイッチボタンON" src="syasinn/ball.png"  class="suitti">
 
 <!--
 <audio id="dennki" preload="auto"> 
@@ -20,13 +27,23 @@
 </audio>
 -->
 
-<button id="suwaipu" >
-
+<!--
 <script src="https://cdn.jsdelivr.net/npm/howler@2.2.3/dist/howler.min.js"></script>
 <script src="howler.js"></script>
+-->
 
 <script>
+  var button = document.getElementById("click");
+  var audio = document.getElementById("dennki");
+
   let engine = Matter.Engine.create();
+
+    // Matter.jsのAPIの読み込み
+  var Engine = Matter.Engine,
+      Render = Matter.Render,
+      World = Matter.World,
+      Bodies = Matter.Bodies,
+      MouseConstraint = Matter.MouseConstraint;
 
   let render = Matter.Render.create({
     element: document.body,
@@ -49,11 +66,23 @@
   });
   render.mouse = mouse;
 
-  let ball = Matter.Bodies.circle(300,500,20);
+  //var img = 'syasinn/ball.png'
+  let ball = Matter.Bodies.circle(300,500,20, {
+    render: {
+      sprite: { //スプライトの設定
+                    texture: 'syasinn/ball.png', //テクスチャ画像を指定
+                }
+    }
+  });
   let sling = Matter.Constraint.create({
     pointA: {x:300,y:100},
     bodyB: ball,
-    stiffness: 0.05
+    stiffness: 0.05,
+    render: {
+                //fillStyle: '#fff', //中身の色
+                strokeStyle: '#777', //線の色
+                lineWidth: 3, //線の太さ
+            }
   });
 
   /*
@@ -65,15 +94,19 @@
   Matter.World.add(engine.world,[ball,sling,mouseCoonstraint]);
   Matter.Engine.run(engine);
   Matter.Render.run(render);
+
   /*
-const canvas = document.createElement('canvas'),context = canvas.getContext('2d');
+  試しで作ってたcanvas
+  const canvas = document.createElement('canvas'),context = canvas.getContext('2d');
+  canvas.widht = 600;
+  canvas.height = 300;
+  canvas.setAttribute('style', 'background-color: #000');
+  document.body.appendChild(canvas);
+  */
 
-canvas.widht = 600;
-canvas.height = 300;
-canvas.setAttribute('style', 'background-color: #000');
-document.body.appendChild(canvas);
-*/
-
+button.addEventListener("click", function() {
+    audio.play();
+});
 </script>
 </body>
 
