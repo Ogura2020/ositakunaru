@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<htmllang="ja">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="css/himo.css" rel="stylesheet" >
+  <title>押したくなるサイト</title>
+</head>
+
+<body>
+
+ <script src="p5.js"></script>
+
+<div class="cover">
+</div>
+
+<!--
+<audio id="dennki" preload="auto"> 
+ <source src="audio/電気のスイッチを入れる.mp3" type="audio/mp3">
+ <p>お使いの環境では再生できません。</p>
+</audio>
+-->
+
+
+<script>
+
+  const springHeight = 32;
+  const maxHeight = 340,
+        minHeight = 200;
+  let left, right;
+   // マウスがトップバーに重なっているかどうか
+  let over = false;
+  // トップバーが移動状態にあるかどうか
+  let move = false;
+
+  // ばねのシミュレーションに関係する定数
+  const M = 2.0, // 質量
+        K = 0.08, // ばね定数
+        D = 0.9, // 減衰
+        R = 250; // 静止しているときの位置(=>自然な状態での長さ)
+
+  // ばねのシミュレーションに関係する変数
+  let ps = R // 位置 => 最初はキャンバス下端まで引き延ばされている
+    vs = 0.0, // 速度
+    as = 0, // 加速度
+    f = 0; // 力
+
+  function setup() {
+    createCanvas(300, 600);
+    fill(0);
+    rectMode(CORNERS);
+    noStroke();
+    left = width / 2 - 18;
+    right = width / 2 + 18;
+  }
+
+  function draw() {
+    background("#4ec5c1");
+    // 変数を更新
+    updateSpring();
+    // 更新した変数を使って描画
+    drawSpring();
+  }
+
+  function drawSpring() {
+    // ばね部
+    stroke(250);
+    line(150, 1, 150, ps);
+    noStroke();
+    // 重り部
+    ellipse(150, ps, 30, 30);
+    fill(255,130,0);
+    // 参考用にキャンバス左上隅にps値を描画
+    //text('ps: ' + ps, 20, 20);
+  }
+  // ばねの位置を更新
+  function updateSpring() {
+    // 鉛直ばね振り子
+    // http://www.wakariyasui.sakura.ne.jp/p/mech/tann/banehuriko.html
+    // f=-ky　=> ばねの復元力：力(f)は-ばね定数(-K)*(現在位置-自然長)
+
+  if (!move) {
+    // psは最初300なので、力が生じる。
+    f = -K * (ps - R);
+    // 加速度：　ニュートンの第二法則(物体の加速度は、加えた力に比例し、その質量に反比例する)
+    // f=ma => a=f/m 加速度は、力/質量で計算できる
+    as = f / M;
+    // 速度：(今の速度+加速度)に減衰率を掛ける(ばねの伸縮はやがて止まる)
+    vs = D * (vs + as);
+    // 新しい位置：新しい速度に現在位置を足す
+    ps = ps + vs;
+  }
+
+    // 速度が微小の場合は0にする。速度は正負両方あるのでabs()関数で絶対値にする
+    if (abs(vs) < 0.1) {
+        vs = 0.0;
+    }
+        // マウスがトップバー上にあるかどうかを調べる
+        if (mouseX > left && mouseX < right && mouseY > ps && mouseY < ps + springHeight) {
+        over = true;
+    }
+    else {
+        over = false;
+    }
+
+    // トップバーがドラッグされて移動状態にあるなら
+    if (move) {
+        // トップバーの高さの真ん中を、移動するマウスカーソルに合わせる => トップバーがマウスの動きに合わせて上下する
+        ps = mouseY - springHeight / 2 + 20;
+        // と同時に、psの上下の移動量を制限して、トップバーが必要以上に上下移動しないようにする
+        ps = constrain(ps, minHeight, maxHeight);
+    }
+    // 参考用にキャンバス左上隅にps値を描画
+    //stroke(255, 0, 0);
+    //text('ps: ' + ps, 20, 20);
+    //noStroke();
+  }
+
+  // マウスが押されたら
+  function mousePressed() {
+      //fadeかける
+      /*
+    if (document.body.classList.contains('hide') ) {
+      document.body.classList.remove('hide');
+      var data = JSON.stringify({
+      action: 'dimming',
+      data: [255]
+    })
+    socket.send(data);
+    console.log("光量255")
+    } else {
+      document.body.classList.add('hide');
+      var data = JSON.stringify({
+      action: 'dimming',
+      data: [0]
+    })
+    socket.send(data);
+    console.log("光量0")
+  　}
+  */
+    // マウスがトップバー上にあるなら
+    if (over) {
+        move = true;
+    }
+  }
+
+  // マウスが放されたら
+  function mouseReleased() {
+    move = false;
+  }
+
+ /*
+  canvas.addEventListener("click", e => {
+      const rect = canvas.getBoundingClientRect();
+      const point = {
+          x: e.clientX - rect.left,
+          y: e.clientY - rect.top
+      };
+  });
+  */
+</script>
+
+
+</body>
+
+</html>
