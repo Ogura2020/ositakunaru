@@ -7,14 +7,26 @@
         <title>押したくなるサイト</title>
     </head>
 
-    <body>
+    <body> 
+          <!--
+        <audio id="dennki" preload="auto"> 
+            <source src="audio/電気のスイッチを入れる.mp3" type="audio/mp3">
+            <p>お使いの環境では再生できません。</p>
+           </audio>
+               -->
         <div class="img_block">
           <img src="syasinn/kaitenn_haikei4.png" alt="回転ボタン後ろ" class="kaitenn_usiro">
-          <img id="drag" src="syasinn/kaitenn3.png"  alt="回転ボタン" class="suitti" style="touch-action: none; cursor: grab; user-select: none;">
+          <img id="drag" src="syasinn/kaitenn3.png"  alt="回転ボタン" class="suitti" 
+          style="transform: translate3d(0px, 0px, 0px); touch-action: none; cursor: grab; user-select: none;">
         </div>
 
+        <!--
+            <script src="https://cdn.jsdelivr.net/npm/howler@2.2.3/dist/howler.min.js"></script>
+        -->
         <script src="gsap/Draggable.min.js"></script>
-        <script src="gsap/gsap.min.js"></script>
-        <script src="gsap/index.js"></script>
+        <script src="gsap/ThrowPropsPlugin.min.js"></script>
+        <script src="gsap/TweenMax.min.js"></script>
+        <!--<script src="gsap/gsap.min.js"></script>-->
+        <script src="gsap/script.js"></script>
     </body>
 </html>
