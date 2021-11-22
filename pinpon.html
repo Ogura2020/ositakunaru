@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<htmllang="ja">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="css/pinpon.css" rel="stylesheet" >
+  <title>押したくなるサイト</title>
+</head>
+
+<body>
+  <div class="img_block">
+    <img src="syasinn/pinpon_haikei.png" alt="ピンポンスイッチ後ろ" class="usiro">
+    <input type="image" src="syasinn/pinpon_osumae.png" alt="ピンポン押す前" onmousedown="fMouseDown(this)" onmouseup="fMouseUp(this)" class="pinpon">
+    <!--<img id="click"  alt="ピンポン押す前" src="syasinn/pinpon_ositatoki.png"  class="suitti" onClick="henkou()">-->
+  </div>
+
+  <!--
+    押したらへこむやつコピペ+変更加えたやつ,＃とかなくても動いたのでコメントアウト
+  <form action="#" onsubmit="return false;">
+    <p>
+        <input type="image" src="syasinn/pinpon_osumae.png" alt="ペンギン" onmousedown="fMouseDown(this)" onmouseup="fMouseUp(this)" />
+    </p>
+</form>
+-->
+
+    <script>
+    /* onMouseDownイベント発生した時 */
+    function fMouseDown(obj) {
+        obj.src="syasinn/pinpon_ositatoki.png";
+    }
+    /* onMouseUpイベントが発生した時 */
+    function fMouseUp(obj) {
+        obj.src="syasinn/pinpon_osumae.png";
+    }
+    </script>
+
+</body>
+
+</html>
