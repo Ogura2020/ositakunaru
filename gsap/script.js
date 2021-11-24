@@ -25,7 +25,7 @@ const kaitenn = document.getElementById('drag').addEventListener('drag', (e) => 
 /* fun little example using GreenSock's Draggable: https://www.greensock.com/draggable/ */
 var knob = document.getElementById("knob");
 var needsRotationUpdate = false;
-var sections = 3;
+var sections = 4;
 
 //when the user drags the knob, we must update the scroll position. We're using the special scrollProxy object of Draggable because it allows us to overscroll (normal browser behavior won't allow it to scroll past the top/bottom). 
 function onRotateKnob() {
@@ -55,12 +55,12 @@ Draggable.create("#drag", {
   type:"rotation",
   throwProps:true,
   edgeResistance:0.85,
-  bounds:{minRotation:0, maxRotation:63},
+  bounds:{minRotation:0, maxRotation:90},
   onDragStart:killTweens,
   onDrag: onRotateKnob,
   onThrowUpdate: onRotateKnob,
   snap: function(endValue) {
-    var step = 63 / (sections - 1);
+    var step = 90 / (sections - 1);
     return Math.round( endValue / step) * step;
   }
 });
