@@ -1,5 +1,5 @@
 const sound = new Howl({
-    src: ['/audio/denki_suitti.mp3']
+    src: ['audio/denki_suitti.mp3']
 });
 
 sound.play();
