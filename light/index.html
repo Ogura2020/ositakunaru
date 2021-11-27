@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="/css/ositakunaru_0926.css" rel="stylesheet" >
+  <link href="css/ositakunaru_0926.css" rel="stylesheet" >
   <title>押したくなるサイト</title>
 </head>
 
@@ -13,8 +13,8 @@
   <p>押したくなりませんか？</p>
 
 <div class="img_block">
- <img src="/syasinn/suitti_back.png" alt="片切スイッチ後ろ" class="usiro">
- <img id="click"  alt="片切スイッチボタンON" src="/syasinn/suitti_on3.png"  class="suitti">
+ <img src="images/suitti_back.png" alt="片切スイッチ後ろ" class="usiro">
+ <img id="click" alt="片切スイッチボタンON" src="images/suitti_on3.png" class="suitti">
 </div>
 
 <p>※注意　音が出ます！</p>
@@ -35,7 +35,7 @@
 <script>
   var button = document.getElementById("click");
   //var audio = document.getElementById("dennki");
-  var syasinn_src = new Array("/syasinn/suitti_on3.png","/syasinn/suitti_off3.png");
+  var syasinn_src = new Array("images/suitti_on3.png","images/suitti_off3.png");
   var i = 0;
   const socket = new WebSocket('wss://p8pz0ho2sb.execute-api.ap-northeast-1.amazonaws.com/production');
 
