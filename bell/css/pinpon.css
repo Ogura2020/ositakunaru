@@ -1,0 +1,41 @@
+@charset “UTF-8”;
+html {
+  touch-action: manipulation;
+}
+body {
+  text-align:center;
+  line-height: 15px;
+  color:#fff;
+  background:#4ec5c1;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+ }
+ 
+ .img_block {
+     position: absolute;
+     top: 20%;
+     left: 0;
+     right: 0;
+     margin: auto;
+ }
+ 
+ .pinpon {
+     position: absolute;
+     top: 19.5%;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     margin: auto;
+ }
+
+ .img_block img{
+   display: block;
+   margin:auto;
+   user-drag: none;
+   -webkit-user-drag: none;
+   -moz-user-select: none;
+   touch-callout: none;
+ }
+

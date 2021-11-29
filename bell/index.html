@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<htmllang="ja">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="css/pinpon.css" rel="stylesheet" >
+  <title>押したくなるサイト</title>
+
+  <style>
+    #div1 {
+      background-image: url('images/pinpon_osumae.png');
+      width: 100px;
+      height: 75px;
+           position: absolute;
+     top: 19.5%;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     margin: auto;
+    }
+
+    #div1:active {
+      background-image: url('images/pinpon_ositatoki.png');
+      width: 100px;
+      height: 76px;
+      position: absolute;
+     top: 19.5%;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     margin: auto;
+    }
+  </style>
+
+</head>
+
+
+<body>
+  <div class="img_block">
+    <img src="images/pinpon_haikei.png" alt="ピンポンスイッチ後ろ" class="usiro">
+    <div id="div1" ontouchstart="">
+      <img scr="images/pinpon_osumae.png" class="pinpon">
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/howler@2.2.3/dist/howler.min.js"></script>
+  <script src="howler.js"></script>
+  
+  <a href="../">戻る！！！！！！！</a>
+</body>
+
+</html>
