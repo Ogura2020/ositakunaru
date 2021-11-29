@@ -5,55 +5,47 @@ html {
 body {
   text-align:center;
   line-height: 15px;
-  color:#fff;
-  background:#4ec5c1;
+  color:#4ec5c1;
+  background:#fff;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
  }
  
- .img_block {
-     position: absolute;
-     top: 27%;
-     left: 0;
-     right: 0;
-     margin: auto;
- }
- 
- .suitti {
-     position: absolute;
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     margin: auto;
- }
- 
- .img_block img{
-   display: block;
-   margin:auto;
-   user-drag: none;
-   -webkit-user-drag: none;
-   -moz-user-select: none;
-   touch-callout: none;
- }
- 
- .cover {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background-color: #000;
-   opacity: 0;
-   pointer-events: none;
-   transition: all 0.15s linear;
- }
- 
- .hide .cover {
-   opacity: 0.5;
- }
+ .sample1 {
+	width:			200px;
+	height:			200px;
+  object-fit: cover;
+	margin:			auto;
+	position:		relative;	/* 相対位置指定 */
+}
+/*
+.sample1 .caption {
+	font-size:		130%;
+	text-align: 		center;
+	padding-top:		80px;
+	color:			#fff;
+}
+*/
+.sample1 .mask {
+	width:			100%;
+	height:			100%;
+	position:		absolute;	/* 絶対位置指定 */
+	top:			0;
+	left:			0;
+	opacity:		0;	/* マスクを表示しない */
+	background-color:	rgba(0,0,0,0.4);	/* マスクは半透明 */
+	-webkit-transition:	all 0.2s ease;
+	transition:		all 0.2s ease;
+}
+.sample1:hover .mask {
+	opacity:		1;	/* マスクを表示する */
+}
+.sample1 .light {
+ color:white;
+
+}
 
  @media screen and (max-width: 960px){
   h1 {font-size: 24px;}
