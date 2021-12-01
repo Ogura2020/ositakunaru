@@ -13,22 +13,23 @@ body {
   -webkit-touch-callout: none;
  }
  
- .sample1 {
-	width:			200px;
+ul {
+  list-style-type: none;
+  display: flex; 
+  padding:  10px;   
+  justify-content:center;
+  flex-wrap: wrap; 
+}
+
+.button {
+	width:			200px; /*マスクの大きさ（画像の大きさと同じ）*/
 	height:			200px;
   object-fit: cover;
-	margin:			auto;
+	margin:			10px;
 	position:		relative;	/* 相対位置指定 */
 }
-/*
-.sample1 .caption {
-	font-size:		130%;
-	text-align: 		center;
-	padding-top:		80px;
-	color:			#fff;
-}
-*/
-.sample1 .mask {
+
+.button .mask {
 	width:			100%;
 	height:			100%;
 	position:		absolute;	/* 絶対位置指定 */
@@ -39,11 +40,10 @@ body {
 	-webkit-transition:	all 0.2s ease;
 	transition:		all 0.2s ease;
 }
-.sample1:hover .mask {
+
+.button:hover .mask {
 	opacity:		1;	/* マスクを表示する */
-}
-.sample1 .light {
- color:white;
+  color:white;
 
 }
 
