@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<htmllang="ja">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="css/bus.css" rel="stylesheet" >
+  <title>押したくなるサイト</title>
+
+  <style>
+    #div1 {
+      background-image: url('images/bus_ositatoki6.png');
+      width: 270px;
+      height: 226px;
+      position: absolute;
+     top: 35%;
+     left: 0.15%;
+     right: 0;
+     bottom: 0;
+     margin: auto;
+    }
+
+    #div1:active {
+      background-image: url('images/bus_osumae3.png');
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="img_block">
+    <img src="images/bus_haikei.png" alt="バス後ろ" class="usiro">
+    <div id="div1" onclick="push();" ontouchstart="">
+      <img id="click" scr="images/bus_ositatoki6" class="pinpon">
+    </div>
+    <img src="images/bus_off.png" class="bus_off">
+  </div>
+
+  <audio id="bus" preload="auto"> 
+    <source src="audio/bus.mp3" type="audio/mp3">
+    <p>お使いの環境では再生できません。</p>
+  </audio>
+
+  <script>
+   function push() {
+     document.getElementById("bus").play();
+   }
+  </script>
+
+  <!--
+  <script src="https://cdn.jsdelivr.net/npm/howler@2.2.3/dist/howler.min.js"></script>
+  <script src="howler.js"></script>
+  -->
+  <a href="../">戻る！！！！！！！</a>
+</body>
+
+</html>
