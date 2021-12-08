@@ -39,3 +39,32 @@ body {
    touch-callout: none;
  }
 
+ @media screen and (max-width: 960px){
+  h1 {font-size: 24px;}
+  p {font-size: 14px;}
+  .img_block {
+   position: absolute;
+   top: 15%;
+   left: 0;
+   right: 0;
+   margin: auto;
+  }
+  .img_block{
+    zoom: 1.3;
+  }
+ }
+
+ @media screen and (max-width: 480px){
+   h1 {font-size: 24px;}
+   p {font-size: 14px;}
+   .img_block {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin: auto;
+   }
+   .img_block{
+    zoom: 0.6;
+  }
+ }
