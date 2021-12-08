@@ -8,7 +8,7 @@
   <title>押したくなるサイト</title>
 
   <style>
-    #div1 {
+    #sita {
       background-image: url('images/bus_ositatoki6.png');
       width: 270px;
       height: 226px;
@@ -20,7 +20,7 @@
      margin: auto;
     }
 
-    #div1:active {
+    #sita:active {
       background-image: url('images/bus_osumae3.png');
     }
   </style>
@@ -30,10 +30,10 @@
 <body>
   <div class="img_block">
     <img src="images/bus_haikei.png" alt="バス後ろ" class="usiro">
-    <div id="div1" onclick="push();" ontouchstart="">
+    <div id="sita" onclick="push();" ontouchstart="">
       <img id="click" scr="images/bus_ositatoki6" class="pinpon">
     </div>
-    <img src="images/bus_off.png" class="bus_off">
+    <img id="ue" src="images/bus_off.png" class="bus_off">
   </div>
 
   <audio id="bus" preload="auto"> 
@@ -42,15 +42,70 @@
   </audio>
 
   <script>
+   const socket = new WebSocket('wss://p8pz0ho2sb.execute-api.ap-northeast-1.amazonaws.com/production');
+
+   var gamenn = document.getElementById("ue");
+   //var syasinn_src = new Array("images/bus_off.png","images/bus_on.png");
+   var img = new Array();
+ 
+   img[0] = new Image();
+   img[0].src = "images/bus_off.png";
+   img[1] = new Image();
+   img[1].src = "images/bus_on.png";
+   var x = 0;
+   var timer;
+
+   // 接続が開いたときのイベント
+   socket.addEventListener('open', function (event) {
+    console.log('websocketに接続しました')
+
+    const data = JSON.stringify({
+      action:'connected',
+      data:{},
+    });
+    socket.send(data);  
+   });
+
+   /*
+  // メッセージの待ち受け
+   socket.addEventListener('message', function (event) {
+    console.log('受信したデータ', event.data);
+   });
+  */
+
    function push() {
-     document.getElementById("bus").play();
+    document.getElementById("bus").play();
+    if(x == 0){
+      x++;
+      document.getElementById("ue").src=img[x].src;
+      timer=setTimeout("reset()",2800);
+
+      var data = JSON.stringify({
+      action: 'soundPlay',
+      data: [1]
+     });
+     socket.send(data);
+     console.log("バスの音が鳴る")
+    }
    }
+
+   /*
+   function push(){
+    if(x == 0){
+      x++;
+      gamenn.src = syasinn_src[x];
+      timer=setTimeout("reset()",1000);
+    }
+  }
+*/
+
+  function reset() {
+    x=0;
+    document.getElementById("ue").src=img[x].src;
+    clearTimeout(timer);
+}
   </script>
 
-  <!--
-  <script src="https://cdn.jsdelivr.net/npm/howler@2.2.3/dist/howler.min.js"></script>
-  <script src="howler.js"></script>
-  -->
   <a href="../">戻る！！！！！！！</a>
 </body>
 
