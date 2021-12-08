@@ -3,7 +3,7 @@ const sound = new Howl({
 });
 
 
-document.querySelector("#div1").addEventListener("click", function(){
+document.querySelector("#sita").addEventListener("click", function(){
 sound.play() 
 });
 // HTML側に`<button id="button1" />`がある前提で
