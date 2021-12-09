@@ -70,6 +70,15 @@
   */
 
   function push() {
+    socket.send(JSON.stringify({
+    action: 'soundPlay',
+    data: ['doorbell.mp3']
+   }));
+   }
+
+
+/*
+  function push() {
      var data = JSON.stringify({
      action: 'soundPlay',
      data: [0]
@@ -77,7 +86,7 @@
     socket.send(data);
     console.log("ピンポンが鳴る")
    }
-   
+  */
   </script>
   <a href="../">戻る！！！！！！！</a>
 </body>
