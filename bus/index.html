@@ -80,11 +80,12 @@
       document.getElementById("ue").src=img[x].src;
       timer=setTimeout("reset()",2800);
 
-      var data = JSON.stringify({
-      action: 'soundPlay',
-      data: [1]
-     });
-     socket.send(data);
+      function push() {
+    socket.send(JSON.stringify({
+    action: 'soundPlay',
+    data: ['audio/bus.mp3']
+   }));
+   }
      console.log("バスの音が鳴る")
     }
    }
@@ -96,14 +97,14 @@
       gamenn.src = syasinn_src[x];
       timer=setTimeout("reset()",1000);
     }
-  }
+   }
 */
 
   function reset() {
     x=0;
     document.getElementById("ue").src=img[x].src;
     clearTimeout(timer);
-}
+  }
   </script>
 
   <a href="../">戻る！！！！！！！</a>
