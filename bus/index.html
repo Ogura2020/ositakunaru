@@ -80,15 +80,15 @@
       document.getElementById("ue").src=img[x].src;
       timer=setTimeout("reset()",2800);
 
-      function push() {
+
     socket.send(JSON.stringify({
     action: 'soundPlay',
-    data: ['audio/bus.mp3']
-   }));
+    data: ['doorbell.mp3']
+  　}));
    }
      console.log("バスの音が鳴る")
     }
-   }
+   
 
    /*
    function push(){
