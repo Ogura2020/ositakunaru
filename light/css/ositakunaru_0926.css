@@ -15,7 +15,7 @@ body {
  
  .img_block {
      position: absolute;
-     top: 27%;
+     top: 20%;
      left: 0;
      right: 0;
      margin: auto;
@@ -60,7 +60,7 @@ body {
   p {font-size: 14px;}
   .img_block {
    position: absolute;
-   top: 20%;
+   top: 15%;
    left: 0;
    right: 0;
    margin: auto;
@@ -75,7 +75,7 @@ body {
    p {font-size: 14px;}
    .img_block {
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 0;
     right: 0;
     margin: auto;
