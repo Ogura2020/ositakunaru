@@ -1,6 +1,7 @@
 @charset “UTF-8”;
 html {
   touch-action: manipulation;
+  font-family: sans-serif;
 }
 body {
   text-align:center;
@@ -13,13 +14,17 @@ body {
   -webkit-touch-callout: none;
  }
 
-.youtube {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
+.youtube1 {
+  max-width: 500px; /* ここに動画の横幅を指定 */
+  margin-left: auto;
+  margin-right: auto;
 }
-.youtube iframe {
+.youtube2 {
+  position: relative;
+  padding-top: 56.25%;
+  height: 0;
+}
+.youtube2 iframe {
   position: absolute;
   top: 0;
   right: 0;
@@ -63,7 +68,6 @@ ul {
   line-height: 200px;
   text-decoration: none;
 }
-
 
  @media screen and (max-width: 960px){
   h1 {font-size: 24px;}
