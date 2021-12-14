@@ -13,10 +13,11 @@ body {
   -webkit-touch-callout: none;
  }
 
- .youtube {
+.youtube {
   position: relative;
-  width: 100%;
-  padding-top: 56.25%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
 }
 .youtube iframe {
   position: absolute;
@@ -49,16 +50,20 @@ ul {
 	top:			0;
 	left:			0;
 	opacity:		0;	/* マスクを表示しない */
-	background-color:	rgba(0,0,0,0.4);	/* マスクは半透明 */
+	background-color:	rgba(0, 0, 0, 0.6);	/* マスクは半透明 */
 	-webkit-transition:	all 0.2s ease;
-	transition:		all 0.2s ease;
+	transition:		all 0.25s ease;
+  text-decoration: none;
 }
 
 .button:hover .mask {
 	opacity:		1;	/* マスクを表示する */
-  color:white;
-
+  color:rgb(255, 253, 240);
+  display: block;
+  line-height: 200px;
+  text-decoration: none;
 }
+
 
  @media screen and (max-width: 960px){
   h1 {font-size: 24px;}
