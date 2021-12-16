@@ -15,7 +15,7 @@ body {
  }
 
 .youtube1 {
-  max-width: 500px; /* ここに動画の横幅を指定 */
+  max-width: 650px; /* ここに動画の横幅を指定 */
   margin-left: auto;
   margin-right: auto;
 }
