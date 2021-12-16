@@ -2,6 +2,7 @@
 html {
   touch-action: manipulation;
 }
+
 body {
   text-align:center;
   line-height: 15px;
@@ -13,49 +14,72 @@ body {
   -webkit-touch-callout: none;
  }
  
- .img_block {
-     position: absolute;
-     top: 20%;
-     left: 0;
-     right: 0;
-     margin: auto;
- }
+.img_block {
+  position: absolute;
+  top: 12%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
  
- .suitti {
-     position: absolute;
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     margin: auto;
- }
+.suitti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
  
- .img_block img{
-   display: block;
-   margin:auto;
-   user-drag: none;
-   -webkit-user-drag: none;
-   -moz-user-select: none;
-   touch-callout: none;
- }
+.img_block img{
+  display: block;
+  margin:auto;
+  user-drag: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  touch-callout: none;
+}
  
- .cover {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background-color: #000;
-   opacity: 0;
-   pointer-events: none;
-   transition: all 0.15s linear;
- }
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.15s linear;
+}
  
- .hide .cover {
-   opacity: 0.5;
- }
+.hide .cover {
+  opacity: 0.5;
+}
 
- @media screen and (max-width: 960px){
+.btn {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.modoru {
+  width:80px;
+  display: inline-block;
+  padding: 0.6em;
+  text-decoration: none;
+  color: #ffffff;
+  border: solid 2px #ffffff;
+  border-radius: 25px;
+  transition: .4s;
+}
+.modoru:hover {
+  background: #21afaa;
+  color: white;
+}
+
+@media screen and (max-width: 960px){
   h1 {font-size: 24px;}
   p {font-size: 14px;}
   .img_block {
@@ -68,19 +92,33 @@ body {
   .img_block{
     zoom: 1.5;
   }
- }
-
- @media screen and (max-width: 480px){
-   h1 {font-size: 24px;}
-   p {font-size: 14px;}
-   .img_block {
+  .btn {
     position: absolute;
-    top: 10%;
+    top: 850px;
     left: 0;
     right: 0;
     margin: auto;
-   }
-   .img_block{
-    zoom: 1;
   }
- }
+}
+
+@media screen and (max-width: 480px){
+  h1 {font-size: 24px;}
+  p {font-size: 14px;}
+  .img_block {
+   position: absolute;
+   top: 10%;
+   left: 0;
+   right: 0;
+   margin: auto;
+  }
+  .img_block{
+   zoom: 1;
+  }
+  .btn {
+    position: absolute;
+    top: 515px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
