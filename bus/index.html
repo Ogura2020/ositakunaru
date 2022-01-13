@@ -9,19 +9,20 @@
 
   <style>
     #sita {
-      background-image: url('images/bus_ositatoki6.png');
+      background-image: url('images/bus_osumae6.png');
+      background-repeat: no-repeat;
       width: 270px;
       height: 226px;
       position: absolute;
-     top: 35%;
-     left: 0.15%;
+     top: 212px;
+     left: 68px;
      right: 0;
      bottom: 0;
      margin: auto;
     }
 
     #sita:active {
-      background-image: url('images/bus_osumae3.png');
+      background-image: url('images/bus_ositatoki8.png');
     }
   </style>
 
@@ -29,11 +30,11 @@
 
 <body>
   <div class="img_block">
-    <img src="images/bus_haikei.png" alt="バス後ろ" class="usiro">
+    <img src="images/bus_haikei2.png" alt="バス後ろ" class="usiro">
     <div id="sita" onclick="push();" ontouchstart="">
-      <img id="click" scr="images/bus_ositatoki6" class="pinpon">
+      <!--<img id="click" src="images/bus_ositatoki6" class="pinpon">-->
     </div>
-    <img id="ue" src="images/bus_off.png" class="bus_off">
+    <img id="ue" src="images/bus_off2.png" class="bus_off">
   </div>
 
   <audio id="bus" preload="auto"> 
@@ -49,9 +50,9 @@
    var img = new Array();
  
    img[0] = new Image();
-   img[0].src = "images/bus_off.png";
+   img[0].src = "images/bus_off2.png";
    img[1] = new Image();
-   img[1].src = "images/bus_on.png";
+   img[1].src = "images/bus_on2.png";
    var x = 0;
    var timer;
 
@@ -84,7 +85,7 @@
     socket.send(JSON.stringify({
     action: 'soundPlay',
     data: ['audio/bus.mp3']
-  　}));
+    }));
    }
      console.log("バスの音が鳴る")
     }
@@ -107,7 +108,15 @@
   }
   </script>
 
-  <a href="../">戻る！！！！！！！</a>
+<ul>
+  <li>効果音：<a href="https://maou.audio/">魔王魂</a></li>
+  <li>声：<a href="https://ondoku3.com/ja/">音読さん</a></li>
+</ul>
+
+<div class="btn">
+  <a href="../" class="modoru">戻る</a>
+</div>
+
 </body>
 
 </html>
