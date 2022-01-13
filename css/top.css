@@ -6,16 +6,22 @@ html {
 body {
   text-align:center;
   line-height: 15px;
-  color:#4ec5c1;
-  background:#fff;
+  color:#0E599C;
+  background:#f6ce3b27;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
  }
 
+h1{
+  font-size: 36px;
+  line-height: 60px;
+  letter-spacing: 0.08em
+}
+
 .youtube1 {
-  max-width: 650px; /* ここに動画の横幅を指定 */
+  max-width: 700px; /* ここに動画の横幅を指定 */
   margin-left: auto;
   margin-right: auto;
 }
@@ -44,7 +50,7 @@ ul {
 	width:			200px; /*マスクの大きさ（画像の大きさと同じ）*/
 	height:			200px;
   object-fit: cover;
-	margin:			10px;
+	margin:			20px;
 	position:		relative;	/* 相対位置指定 */
 }
 
@@ -69,8 +75,25 @@ ul {
   text-decoration: none;
 }
 
+a{
+  text-decoration: none;
+}
+
+p{
+  font-weight: 600;
+  line-height: 25px;
+}
+
+p2{
+  color: rgb(241, 72, 143);
+  font-weight: 600;
+}
+
  @media screen and (max-width: 960px){
-  h1 {font-size: 24px;}
+  h1 {font-size: 30px;
+     line-height: 50px;
+     letter-spacing: 0.08em
+  }
   p {font-size: 14px;}
   .img_block {
    position: absolute;
@@ -85,7 +108,10 @@ ul {
  }
 
  @media screen and (max-width: 480px){
-   h1 {font-size: 24px;}
+   h1 {font-size: 22px;
+       line-height: 40px;
+       letter-spacing: 0.08em
+   }
    p {font-size: 14px;}
    .img_block {
     position: absolute;
