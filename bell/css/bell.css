@@ -63,8 +63,6 @@ body {
 }
 
  @media screen and (max-width: 960px){
-  h1 {font-size: 24px;}
-  p {font-size: 14px;}
   .img_block {
    position: absolute;
    top: 15%;
@@ -75,19 +73,31 @@ body {
   .img_block{
     zoom: 1.4;
   }
+  .btn {
+    position: absolute;
+    top: 515px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
  }
 
  @media screen and (max-width: 480px){
-   h1 {font-size: 24px;}
-   p {font-size: 14px;}
    .img_block {
     position: absolute;
-    top: 10%;
+    top: 7%;
     left: 0;
     right: 0;
     margin: auto;
    }
    .img_block{
     zoom: 1.0;
+  }
+  .btn {
+    position: absolute;
+    top: 515px;
+    left: 0;
+    right: 0;
+    margin: auto;
   }
  }
