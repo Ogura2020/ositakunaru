@@ -8,22 +8,27 @@ body {
   line-height: 15px;
   color:#0E599C;
   background:#f6ce3b27;
+  margin: 0;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
  }
 
-h1{
+.taitoru{
   font-size: 36px;
-  line-height: 60px;
-  letter-spacing: 0.08em
+  font-weight: bold;
+  color:#0E599C;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .youtube1 {
   max-width: 700px; /* ここに動画の横幅を指定 */
   margin-left: auto;
   margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 .youtube2 {
   position: relative;
@@ -44,6 +49,7 @@ ul {
   padding:  10px;   
   justify-content:center;
   flex-wrap: wrap; 
+  margin-top: -30px;
 }
 
 .button {
@@ -75,52 +81,61 @@ ul {
   text-decoration: none;
 }
 
+.midasi{
+  font-size: 24px;
+  font-weight: bold;
+  color:#0E599C;
+  margin-top: 70px;
+}
+
+.kome {
+  font-size: 14px;
+  color: rgb(235, 0, 0);
+  margin-top: -10px;
+}
+
+.midasi2{
+  font-size: 24px;
+  font-weight: bold;
+  color:#0E599C;
+  margin-top: 55px;
+}
+
+.gaiyou{
+  line-height: 1.8;
+  color:#0E599C;
+  margin-top: 15px;
+}
+
+.url{
+  color: rgb(235, 0, 0);
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
 a{
   text-decoration: none;
+  color:#0E599C;
+}
+a:hover {
+  color:#4ec5c1;
 }
 
-p{
-  font-weight: 600;
-  line-height: 25px;
+footer{
+  height: 50px;
+  color: #fff;
+  background-color: #0E599C;
+  padding-top:10px;
+  padding-bottom: 10px;
+display:block;
 }
 
-p2{
-  color: rgb(241, 72, 143);
-  font-weight: 600;
-}
 
  @media screen and (max-width: 960px){
-  h1 {font-size: 30px;
-     line-height: 50px;
-     letter-spacing: 0.08em
-  }
-  p {font-size: 14px;}
-  .img_block {
-   position: absolute;
-   top: 20%;
-   left: 0;
-   right: 0;
-   margin: auto;
-  }
-  .img_block{
-    zoom: 1.5;
-  }
+
  }
 
  @media screen and (max-width: 480px){
-   h1 {font-size: 22px;
-       line-height: 40px;
-       letter-spacing: 0.08em
-   }
-   p {font-size: 14px;}
-   .img_block {
-    position: absolute;
-    top: 20%;
-    left: 0;
-    right: 0;
-    margin: auto;
-   }
-   .img_block{
-    zoom: 1;
-  }
+
  }
