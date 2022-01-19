@@ -37,7 +37,6 @@
 // 接続が開いたときのイベント
   socket.addEventListener('open', function (event) {
     console.log('websocketに接続しました')
-
     const data = JSON.stringify({
       action:'connected',
       data:{},
@@ -70,6 +69,17 @@
 	  button.src = syasinn_src[i];
   }
  */
+
+  function okuru(){
+    const okuru = JSON.stringify({
+      action:'ping',
+      data:{},
+    });
+      socket.send(okuru);
+      console.log('データを送りました' + okuru);
+  }
+  setInterval(okuru, 60000);
+
   function fade() {
     if (document.body.classList.contains('hide') ) {
       document.body.classList.remove('hide');
@@ -84,10 +94,10 @@
       var data = JSON.stringify({
       action: 'dimming',
       data: [0]
-    })
-    socket.send(data);
-    console.log("光量0")
-  　}
+      })
+      socket.send(data);
+      console.log("光量0")
+    }
   }
 
   /*
@@ -101,6 +111,7 @@
   */
 
   button.addEventListener("click", function() {
+    okuru();
     //audio.play();
     fade();
     //henkou();
