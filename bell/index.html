@@ -49,7 +49,6 @@
   <script src="howler.js"></script>
   
   <script>
-   const button = document.getElementById("div1");
    const socket = new WebSocket('wss://p8pz0ho2sb.execute-api.ap-northeast-1.amazonaws.com/production');
 
    // 接続が開いたときのイベント
@@ -68,6 +67,16 @@
     console.log('受信したデータ', event.data);
    });
   */
+
+  function okuru(){
+    const okuru = JSON.stringify({
+      action:'ping',
+      data:{},
+    });
+      socket.send(okuru);
+      console.log('データを送りました' + okuru);
+  }
+  setInterval(okuru, 60000);
 
   function push() {
     socket.send(JSON.stringify({
@@ -91,6 +100,9 @@
   </script>
 
 <div class="btn">
+  <p class="kari">
+    効果音：<a href="https://sounddictionary.info/">効果音辞典</a>
+  </p>
   <a href="../" class="modoru">戻る</a>
 </div>
 
