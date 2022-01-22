@@ -98,7 +98,7 @@ ul {
   font-size: 24px;
   font-weight: bold;
   color:#0E599C;
-  margin-top: 55px;
+  margin-top: 45px;
 }
 
 .gaiyou{
@@ -107,11 +107,16 @@ ul {
   margin-top: 15px;
 }
 
+.genntei{
+  line-height: 1.8;
+}
+
 .url{
   color: rgb(235, 0, 0);
   font-weight: 600;
   margin-top: 20px;
   margin-bottom: 50px;
+  margin: 20px;
 }
 
 a{
@@ -126,9 +131,10 @@ footer{
   height: 50px;
   color: #fff;
   background-color: #0E599C;
+  margin-top: 50px;
   padding-top:10px;
   padding-bottom: 10px;
-display:block;
+  display:block;
 }
 
 
@@ -137,5 +143,63 @@ display:block;
  }
 
  @media screen and (max-width: 480px){
+    .taitoru{
+      font-size: 30px;
+     }
+    br {
+      display: none;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .gaiyou{
+      margin: 20px;
+      text-align: justify;
+      /* IE対策 */
+      text-justify: inter-ideograph;
+    }
+    .genntei{
+      margin: 20px;
+      text-align: justify;
+      /* IE対策 */
+      text-justify: inter-ideograph;
+    }
+    .url{
+      font-size: 14px;
+      margin: 0;
+    }
+ }
 
+ @media screen and (max-width: 320px){
+    .taitoru{
+      font-size: 28px;
+    }
+    .midasi{
+      font-size: 22px;
+    }
+    .midasi2{
+     font-size: 22px;
+    }
+    br {
+      display: none;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .gaiyou{
+      font-size: 14px;
+      margin: 20px;
+      text-align: justify;
+      /* IE対策 */
+      text-justify: inter-ideograph;
+    }
+    .genntei{
+      font-size: 14px;
+      margin: 20px;
+      text-align: justify;
+      /* IE対策 */
+      text-justify: inter-ideograph;
+    }
+    .url{
+      font-size: 13px;
+      margin: 2.5px;
+    }
  }
