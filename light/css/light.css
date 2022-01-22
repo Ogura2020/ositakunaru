@@ -56,9 +56,16 @@ body {
   opacity: 0.6;
 }
 
+.kari {
+  font-size: 13.5px;
+}
+a {
+    text-decoration: none;
+}
+
 .btn {
   position: absolute;
-  top: 80%;
+  top: 75%;
   left: 0;
   right: 0;
   margin: auto;
@@ -73,6 +80,7 @@ body {
   border: solid 2px #ffffff;
   border-radius: 25px;
   transition: .4s;
+  margin-top: 8px;
 }
 .modoru:hover {
   background: #21afaa;
@@ -92,7 +100,7 @@ body {
   }
   .btn {
     position: absolute;
-    top: 850px;
+    top: 800px;
     left: 0;
     right: 0;
     margin: auto;
@@ -117,4 +125,24 @@ body {
     right: 0;
     margin: auto;
   }
+}
+
+@media screen and (max-width: 320px){
+  .img_block {
+   position: absolute;
+   top: 7%;
+   left: 0;
+   right: 0;
+   margin: auto;
+  }
+  .img_block{
+   zoom: 0.9;
+ }
+ .btn {
+   position: absolute;
+   top: 450px;
+   left: 0;
+   right: 0;
+   margin: auto;
+ }
 }
