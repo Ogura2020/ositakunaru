@@ -106,14 +106,25 @@
     document.getElementById("ue").src=img[x].src;
     clearTimeout(timer);
   }
+
+  function okuru(){
+    const okuru = JSON.stringify({
+      action:'ping',
+      data:{},
+    });
+      socket.send(okuru);
+      console.log('データを送りました' + okuru);
+  }
+  setInterval(okuru, 60000);
   </script>
 
-<ul>
-  <li>効果音：<a href="https://maou.audio/">魔王魂</a></li>
-  <li>声：<a href="https://ondoku3.com/ja/">音読さん</a></li>
-</ul>
+
 
 <div class="btn">
+  <p class="kari">
+    効果音：<a href="https://maou.audio/">魔王魂</a><br>
+    声：<a href="https://ondoku3.com/ja/">音読さん</a>
+    </p>
   <a href="../" class="modoru">戻る</a>
 </div>
 
