@@ -1,6 +1,7 @@
 @charset “UTF-8”;
 html {
   touch-action: manipulation;
+  font-family: sans-serif;
 }
 body {
   text-align:center;
@@ -43,10 +44,10 @@ body {
 .kari {
   font-size: 13.5px;
   line-height: 1.5;
-  
 }
 a {
-    text-decoration: none;
+  color:#116fc0;
+  text-decoration: none;
 }
 
  .btn {
@@ -58,7 +59,6 @@ a {
 }
 
 .modoru {
-  font-size: 17px;
   width:80px;
   display: inline-block;
   padding: 0.6em;
@@ -67,7 +67,6 @@ a {
   border: solid 2px #ffffff;
   border-radius: 25px;
   transition: .4s;
-  margin-top: 8px;
 }
 .modoru:hover {
   background: #21afaa;
@@ -107,7 +106,7 @@ a {
   }
   .btn {
     position: absolute;
-    top: 475px;
+    top: 455px;
     left: 0;
     right: 0;
     margin: auto;
@@ -127,7 +126,7 @@ a {
  }
  .btn {
    position: absolute;
-   top: 425px;
+   top: 405px;
    left: 0;
    right: 0;
    margin: auto;

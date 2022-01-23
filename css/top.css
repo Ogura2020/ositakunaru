@@ -164,7 +164,7 @@ footer{
       text-justify: inter-ideograph;
     }
     .url{
-      font-size: 14px;
+      font-size: 15px;
       margin: 0;
     }
  }
@@ -200,6 +200,6 @@ footer{
     }
     .url{
       font-size: 13px;
-      margin: 2.5px;
+      margin: 1px;
     }
  }

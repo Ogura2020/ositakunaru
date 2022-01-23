@@ -1,6 +1,7 @@
 @charset “UTF-8”;
 html {
   touch-action: manipulation;
+  font-family: sans-serif;
 }
 
 body {
@@ -60,7 +61,8 @@ body {
   font-size: 13.5px;
 }
 a {
-    text-decoration: none;
+  color:#116fc0;
+  text-decoration: none;
 }
 
 .btn {
@@ -80,7 +82,6 @@ a {
   border: solid 2px #ffffff;
   border-radius: 25px;
   transition: .4s;
-  margin-top: 8px;
 }
 .modoru:hover {
   background: #21afaa;
@@ -120,7 +121,7 @@ a {
   }
   .btn {
     position: absolute;
-    top: 515px;
+    top: 490px;
     left: 0;
     right: 0;
     margin: auto;
@@ -140,7 +141,7 @@ a {
  }
  .btn {
    position: absolute;
-   top: 450px;
+   top: 440px;
    left: 0;
    right: 0;
    margin: auto;
