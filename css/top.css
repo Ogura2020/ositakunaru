@@ -89,8 +89,9 @@ ul {
 }
 
 .kome {
-  font-size: 14px;
+  font-size: 13px;
   color: rgb(235, 0, 0);
+  line-height: 1.5;
   margin-top: -10px;
 }
 
@@ -114,9 +115,9 @@ ul {
 .url{
   color: rgb(235, 0, 0);
   font-weight: 600;
+  line-height: 2;
   margin-top: 20px;
   margin-bottom: 50px;
-  margin: 20px;
 }
 
 a{
@@ -146,7 +147,7 @@ footer{
     .taitoru{
       font-size: 30px;
      }
-    br {
+    .gaiyou br {
       display: none;
       margin-left: 10px;
       margin-right: 10px;
@@ -179,7 +180,7 @@ footer{
     .midasi2{
      font-size: 22px;
     }
-    br {
+    .gaiyou br {
       display: none;
       margin-left: 10px;
       margin-right: 10px;
